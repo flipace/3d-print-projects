@@ -80,13 +80,12 @@ union() {
                 cube([width, length, walls * 4]);
 
             // cut out sliding part
-            translate([walls * 2, walls * 2, height + walls])
-                cube([width, length - walls * 4, walls * 2]);
+            translate([walls / 2, walls / 2, height + walls])
+                cube([width, length - walls * 3, walls * 1.5]);
 
             // cut out top part
-            translate([walls * 4, walls * 4, height - 2])
-                cube([width + 100, length - walls * 8, 20]);
-            
+            translate([walls * 2, walls * 2, height - 1])
+                cube([width + 100, length - walls * 3, 20]);
             
             // cut out end part top
             translate([width - walls * 5.7, 0- walls * 2, height + walls * 6])
